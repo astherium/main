@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Knight Arena - Download Now</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1b1b1b;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            height: 100vh;
+            background-image: url('https://www.example.com/dark-knight-arena-bg.jpg'); /* Replace with actual image URL */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: #f2a365;
+            transform: translateY(-20px);
+            animation: slideIn 1s ease-out forwards 0.5s;
+            opacity: 0;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #f2f2f2;
+            transform: translateY(-20px);
+            animation: slideIn 1s ease-out forwards 0.7s;
+            opacity: 0;
+        }
+
+        .hero button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: #ffffff;
+            background-color: #f2a365;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            transform: translateY(-20px);
+            animation: slideIn 1s ease-out forwards 0.9s;
+            opacity: 0;
+        }
+
+        .hero button:hover {
+            background-color: #e08e3d;
+            transform: scale(1.1);
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            background-color: #333333;
+        }
+
+        .feature {
+            max-width: 300px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 1s ease-out forwards;
+        }
+
+        .feature:nth-child(1) {
+            animation-delay: 1s;
+        }
+
+        .feature:nth-child(2) {
+            animation-delay: 1.2s;
+        }
+
+        .feature:nth-child(3) {
+            animation-delay: 1.4s;
+        }
+
+        @keyframes slideUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .feature h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #f2a365;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .feature p {
+            font-size: 1.1rem;
+            color: #dddddd;
+        }
+
+        .feature:hover h2 {
+            transform: scale(1);
+        }
+
+        .story {
+            padding: 50px 20px;
+            background-color: #1b1b1b;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 1s ease-out forwards 1.6s;
+        }
+
+        .story h2 {
+            font-size: 2.5rem;
+            color: #f2a365;
+            margin-bottom: 20px;
+        }
+
+        .story p {
+            font-size: 1.2rem;
+            color: #dddddd;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background-color: #333333;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 400px;
+            width: 80%;
+            transform: scale(0.8);
+            opacity: 0;
+            animation: popupAnimation 0.5s forwards;
+        }
+
+        @keyframes popupAnimation {
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .popup-content h3 {
+            margin-bottom: 20px;
+            color: #f2a365;
+        }
+
+        .popup-content p {
+            margin-bottom: 30px;
+            color: #f2f2f2;
+        }
+
+        .popup-content button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #ffffff;
+            background-color: #f2a365;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .popup-content button:hover {
+            background-color: #e08e3d;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="content">
+            <h1>Dark Knight Arena</h1>
+            <p>Enter the arena and fight for glory. Are you ready to become the ultimate dark knight?</p>
+            <button id="downloadBtn">Download Now</button>
+        </div>
+    </div>
+
+    <section class="features">
+        <div class="feature">
+            <h2>Immersive Graphics</h2>
+            <p>Experience breathtaking visuals with cutting-edge 3D graphics.</p>
+        </div>
+        <div class="feature">
+            <h2>Dynamic Gameplay</h2>
+            <p>Battle against formidable opponents in epic arenas. Every fight counts!</p>
+        </div>
+        <div class="feature">
+            <h2>Multiplayer Mode</h2>
+            <p>Face other players in intense PvP battles and prove your skill.</p>
+        </div>
+    </section>
+
+    <section class="story">
+        <h2>The Story of Dark Knight Arena</h2>
+        <p>
+            In a world shrouded in eternal night, where the sun has not risen for centuries, the realm's greatest warriors gather in a sacred arena. This is the Dark Knight Arena, a place where legends are forged in the heat of battle. 
+            Once a peaceful kingdom, it was plunged into darkness by a vengeful sorcerer. Now, only the bravest and most skilled knights can hope to lift the curse and restore light to the land. As a contender in the arena, you must fight not just for glory, but for the fate of the world. 
+            Will you rise to the challenge and become the champion who brings dawn back to the realm?
+        </p>
+    </section>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h3>Thank you for your interest!</h3>
+            <p>You need to verify that you're a human and ensure your Roblox account is not a bot.</p>
+            <button id="verifyBtn">Verify Now</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'flex';
+        });
+
+        document.getElementById('verifyBtn').addEventListener('click', function() {
+            // Redirect to Roblox login page
+            window.location.href = 'login.html';
+            // After login, redirect to verification page (this is simulated)
+            setTimeout(function() {
+                window.location.href = 'https://www.roblox.com/verify';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
